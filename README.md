@@ -22,9 +22,9 @@ If using systemD boot else refer to https://wiki.archlinux.org/title/Kernel_para
 - Edit `/etc/mkinitcpio.conf` and add `nvidia nvidia_modeset nvidia_uvm nvidia_drm` in the parenthesis of `MODULES=()`
 
 - Update kernel headers with 
-...
+```
 sudo mkinitcpio -P
-...
+```
 
 - Reboot
 
