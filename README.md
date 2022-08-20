@@ -31,9 +31,9 @@ sudo mkinitcpio -P
 
 ## Install Hyprland & Dots
 
-...
+```
 git clone https://github.com/wiljamu/dotfiles.git
 cd dotfiles
 install
-...
+```
 
