@@ -34,6 +34,7 @@ sudo mkinitcpio -P
 ```
 git clone https://github.com/wiljamu/dotfiles.git
 cd dotfiles
+sudo chmod +x install
 install
 ```
 
