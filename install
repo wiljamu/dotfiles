@@ -17,9 +17,15 @@
  sudo cp -r ./util/cherry-blossom.desktop /usr/share/wayland-sessions/
 
  echo "[====enabling dm====]"
+ 
+ sudo systemctl disable gdm
 
  sudo systemctl enable sddm
+ 
+ sudo systemctl disable gdm
 
+ sudo systemctl enable sddm
+ 
  echo "[====changing shell====]"
 
  chsh -s /usr/bin/fish 
