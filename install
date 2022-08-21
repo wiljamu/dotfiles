@@ -2,13 +2,13 @@
 
  echo "[====installing deps====]"
 
- paru --noconfirm -S hyprland-git dunst bat cava fish kitty neofetch waybar-hyprland-git wofi hyprpaper-git ttf-iosevka-nerd libva qt5-wayland qt5ct nvidia-vaapi-driver-git
+ paru --noconfirm -S hyprland-git dunst bat cava fish kitty neofetch waybar-hyprland-git wofi hyprpaper-git ttf-iosevka-nerd libva qt5-wayland qt5ct nvidia-vaapi-driver-git starship
 
- paru --noconfirm -S hyprland-git dunst bat cava fish kitty neofetch waybar-hyprland-git wofi hyprpaper-git sddm ttf-iosevka-nerd libva qt5-wayland gt5ct nvidia-vaapi-driver-git 
+ paru --noconfirm -S hyprland-git dunst bat cava fish kitty neofetch waybar-hyprland-git wofi hyprpaper-git sddm ttf-iosevka-nerd libva qt5-wayland gt5ct nvidia-vaapi-driver-git starship
 
  echo "[====moving config====]"
 
- cp -r ./config ~/.config/
+ cp -r ./config/* ~/.config/
 
  sudo cp -r ./util/cherry-blossom /usr/bin/
 
