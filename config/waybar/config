@@ -1,30 +1,27 @@
 {
 	"layer": "top",
-	"modules-left": ["tray"],
+	"modules-left": ["wlr/taskbar","mpd"],
 	"modules-center": ["wlr/workspaces"],
-	"modules-right": ["pulseaudio","clock"], 
-	"margin-top": 10,
-	"width": 2540,
-	"height": 37,
+	"modules-right": ["pulseaudio","clock"],
 
 "wlr/workspaces": {
-	"disable-scroll": false,
-	"all-outputs": true,
+	"all-outputs": false,
    	"on-click": "activate",
-	"format": "{icon}",
-   "persistent_workspaces": {
-	"1": [],
-      	"2": [],
-      	"3": [],
-      	"4": [],
-      	"5": [],
-      	"6": [],
-      	"7": [],
-      	"8": [],
-      	"9": [],
-      	"10": []
-},
+	"format": "{name}",
 
+"persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+	},
+   
 "format-icons": {
       	"1": "●",
       	"2": "●",
@@ -37,7 +34,8 @@
       	"9": "●",
       	"10": "●",
       	"default": "●",
-      	"active": "●"
+	"focused": "●",
+	"active": "●"
 	}
 },
 
@@ -107,5 +105,49 @@
         "format": " {}%",
         "max-length": 10
 },
+
+"wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "icon-theme": "Numix-Circle",
+    "tooltip-format": "{title}",
+    "on-click": "maximize",
+    "on-click-middle": "close",
+    "ignore-list": [
+    ],
+    "app_ids-mapping": {
+	"firefoxdeveloperedition": "firefox-developer-edition"
+    },
+},
+
+"hyprland/window": {
+    "format": "👉 {}"
+},
+
+"mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "interval": 10,
+    "consume-icons": {
+        "on": " " // Icon shows only when "consume" is on
+    },
+    "random-icons": {
+        "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+        "on": " "
+    },
+    "repeat-icons": {
+        "on": " "
+    },
+    "single-icons": {
+        "on": "1 "
+    },
+    "state-icons": {
+        "paused": "",
+        "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+}
     	
 }
